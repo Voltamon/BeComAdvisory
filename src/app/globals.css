@@ -221,11 +221,18 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
 }
 
-/* Services Grid */
+/* Services Section */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  /* Triple-system group peer-dimming properties */
+}
+
+.services-grid:hover .service-card:not(:hover) {
+  opacity: 0.6;
+  filter: blur(2px) grayscale(50%);
+  transform: scale(0.98);
 }
 
 .service-icon {

@@ -37,18 +37,21 @@ export default function Home() {
       ease: 'power3.out'
     }, "-=0.6");
 
-    // Service Cards Animations
-    gsap.from('.services-grid > div', {
-      scrollTrigger: {
-        trigger: '.services-grid',
-        start: 'top 85%',
-      },
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: 'power2.out'
-    });
+    // Service Cards Animations (Staggered Unroll)
+    gsap.fromTo('.services-grid > div', 
+      { y: 80, opacity: 0 },
+      {
+        scrollTrigger: {
+          trigger: '.services-grid',
+          start: 'top 85%',
+        },
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.15,
+        ease: 'power3.out'
+      }
+    );
 
     // Process Steps Animations
     gsap.from('.process-steps .step', {
@@ -118,7 +121,7 @@ export default function Home() {
 
       {/* Services Section */}
       <section id="servicios" className="container section">
-        <div style={{ maxWidth: '400px', marginBottom: '3rem' }}>
+        <div style={{ maxWidth: '600px', margin: '0 auto 3rem auto', textAlign: 'center' }}>
           <h2 className="section-title" style={{ marginBottom: '1rem' }}>Cosas que hacemos para mejorar tu negocio.</h2>
           <p style={{ color: 'var(--text-secondary)' }}>
             Eliminamos el riesgo al centralizar el expertise que necesitas.
@@ -149,7 +152,7 @@ export default function Home() {
 
       {/* Process Section */}
       <section id="proceso" className="container section process">
-        <h2 className="section-title" style={{ marginBottom: '1rem', textAlign: 'left' }}>Our Way of Work</h2>
+        <h2 className="section-title" style={{ marginBottom: '1rem', textAlign: 'left' }}>Nuestra Forma de Trabajar</h2>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '3rem', textAlign: 'left', maxWidth: '600px' }}>
           Con una metodología 'pull-and-execute' y una misión clara: Convertir la complejidad de los negocios en un plan de acción claro y efectivo.
         </p>
