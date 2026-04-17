@@ -8,6 +8,7 @@ import { Briefcase, Component, Users, ArrowRight } from 'lucide-react';
 import SpotlightCard from '@/components/SpotlightCard';
 import AccordionProcess from '@/components/AccordionProcess';
 import LightRays from '@/components/LightRays';
+import Link from 'next/link';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -100,7 +101,7 @@ export default function Home() {
             Únete a las mejores compañías allá afuera.
           </p>
           <div className="hero-actions">
-            <button className="btn btn-primary">Agenda tu Diagnóstico</button>
+            <Link href="/form" className="btn btn-primary">Agenda tu Diagnóstico</Link>
             <a href="#proceso" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
               ¿Cómo trabajamos? <ArrowRight size={16}/>
             </a>
@@ -179,9 +180,9 @@ export default function Home() {
             Asegura el crecimiento de tu empresa con el acompañamiento adecuado.
             Desarrollo de tecnología. Expertise centralizado.
           </p>
-          <button className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>
+          <Link href="/form" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>
             Descubre Cómo
-          </button>
+          </Link>
         </SpotlightCard>
       </section>
 
