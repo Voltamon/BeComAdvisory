@@ -12,7 +12,6 @@ export default function Header() {
         <Link href="#servicios" className="nav-link">Servicios</Link>
         <Link href="#proceso" className="nav-link">Proceso</Link>
         <Link href="#contacto" className="nav-link">Contacto</Link>
-        <Link href="#diagnostico" className="btn btn-outline">Agenda tu Diagnóstico</Link>
       </nav>
     </header>
   );

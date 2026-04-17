@@ -27,12 +27,12 @@ export default function AccordionProcess({ steps }) {
               key={index}
               onMouseEnter={() => setActiveIndex(index)}
               style={{
-                backgroundColor: 'var(--bg-card)',
-                borderRadius: '8px',
-                padding: '1.5rem',
+                backgroundColor: 'transparent',
+                padding: '1.5rem 0',
                 cursor: 'pointer',
-                border: isActive ? '1px solid rgba(255,255,255,0.1)' : '1px solid transparent',
-                transition: 'border 0.3s ease',
+                borderBottom: '1px solid var(--divider)',
+                borderTop: index === 0 ? '1px solid var(--divider)' : 'none',
+                transition: 'all 0.3s ease',
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

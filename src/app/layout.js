@@ -7,6 +7,9 @@ const outfit = Outfit({ subsets: ["latin"], weight: ['400', '500', '600', '700']
 export const metadata = {
   title: "BeCom Advisory | Ecosistema Centralizado para el Crecimiento",
   description: "Estrategia 360º en negocios. Desarrollo de tecnología. Expertise centralizado.",
+  icons: {
+    icon: "/icon.png", 
+  }
 };
 
 export default function RootLayout({ children }) {

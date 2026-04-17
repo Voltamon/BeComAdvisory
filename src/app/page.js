@@ -150,6 +150,8 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="section-divider"></div>
+
       {/* Process Section */}
       <section id="proceso" className="container section process">
         <h2 className="section-title" style={{ marginBottom: '1rem', textAlign: 'left' }}>Nuestra Forma de Trabajar</h2>
@@ -167,6 +169,8 @@ export default function Home() {
         />
       </section>
 
+      <div className="section-divider"></div>
+
       {/* CTA Section */}
       <section id="contacto" className="container section">
         <SpotlightCard className="cta" spotlightColor="rgba(255, 255, 255, 0.15)">
@@ -180,6 +184,8 @@ export default function Home() {
           </button>
         </SpotlightCard>
       </section>
+
+      <div className="section-divider"></div>
 
       {/* Footer */}
       <footer className="container footer">

@@ -110,6 +110,14 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 6rem;
 }
 
+.section-divider {
+  width: 100%;
+  max-width: 1200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--divider) 20%, var(--divider) 80%, transparent);
+  margin: 0 auto;
+}
+
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 3rem;
@@ -341,7 +349,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer */
 .footer {
   padding: 4rem 1.25rem 2rem;
-  border-top: 1px solid var(--divider);
   display: flex;
   justify-content: space-between;
   align-items: center;
