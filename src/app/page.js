@@ -7,6 +7,7 @@ import ServiceCard from '@/components/ServiceCard';
 import { Briefcase, Component, Users, ArrowRight } from 'lucide-react';
 import SpotlightCard from '@/components/SpotlightCard';
 import AccordionProcess from '@/components/AccordionProcess';
+import LightRays from '@/components/LightRays';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -81,8 +82,13 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="container hero">
-        <div className="hero-content">
+      <section className="container hero" style={{ position: 'relative' }}>
+        <LightRays
+          raysColor="#ffffff"
+          raysOrigin="top-center"
+          className="hero-rays"
+        />
+        <div className="hero-content" style={{ position: 'relative', zIndex: 1 }}>
           <h1 className="hero-title">
             El Ecosistema <span className="text-accent">Centralizado</span> para el Crecimiento Empresarial.
           </h1>
@@ -97,7 +103,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="hero-image" style={{ background: 'linear-gradient(45deg, #18181A, #2a2a35)' }}>
+        <div className="hero-image" style={{ background: 'linear-gradient(45deg, #18181A, #2a2a35)', position: 'relative', zIndex: 1 }}>
           <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.1)' }}>
             [Portrait Image / Illustration]
           </div>

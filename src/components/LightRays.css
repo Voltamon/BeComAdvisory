@@ -1,0 +1,12 @@
+.light-rays-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+}
