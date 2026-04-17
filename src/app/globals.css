@@ -1,11 +1,11 @@
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #121212;
-  --bg-card: #18181A;
+  --bg-primary: #000000;
+  --bg-secondary: #a3a3a3;
+  --bg-card: #000000;
   --text-primary: #ffffff;
   --text-secondary: #a3a3a3;
-  --accent: #90bbf0;
-  --accent-hover: #7baced;
+  --accent: #ffffff;
+  --accent-hover: #d1d1d1;
   --divider: #262626;
 
   --border-radius: 20px;
@@ -13,7 +13,7 @@
   --font-body: 'Inter', sans-serif;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -23,6 +23,10 @@ html, body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.08), transparent 40%),
+    radial-gradient(ellipse at bottom right, rgba(255, 255, 255, 0.05), transparent 50%);
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.5;
@@ -43,9 +47,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Utilities */
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem; /* Mobile-first base padding */
+}
+
+/* Standard mobile-first media query for desktop padding */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
 }
 
 .text-accent {
@@ -78,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary:hover {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(144, 187, 240, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .btn-outline {
@@ -94,7 +106,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Layout Blocks */
 .section {
-  padding: 6rem 0;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .section-title {
@@ -155,7 +168,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-  padding: 8rem 0 4rem;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
   display: flex;
   align-items: center;
   gap: 4rem;
@@ -203,9 +217,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Marquee */
 .marquee-wrapper {
   overflow: hidden;
-  padding: 2rem 0;
-  border-top: 1px solid var(--divider);
-  border-bottom: 1px solid var(--divider);
+  padding: 0.25rem 0;
+  border-top: 0.5px solid var(--divider);
+  border-bottom: 0.5px solid var(--divider);
   background: var(--bg-card);
 }
 
@@ -318,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
 .cta {
   background: linear-gradient(to right, var(--bg-card), var(--bg-primary));
   border-radius: var(--border-radius);
-  padding: 5rem 3rem;
+  padding: 6rem 3rem;
   text-align: center;
   border: 1px solid var(--divider);
   margin-top: 4rem;
@@ -373,12 +387,9 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
   }
 
-  .container {
-    padding: 0 1.25rem;
-  }
-
   .section {
-    padding: 4rem 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .card {
@@ -386,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .cta {
-    padding: 3rem 1.5rem;
+    padding: 3.6rem 1.5rem;
   }
 
   .accordion-wrapper {
@@ -403,7 +414,8 @@ h1, h2, h3, h4, h5, h6 {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 4rem 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   .hero-title {
     font-size: 2.5rem;
@@ -413,18 +425,21 @@ h1, h2, h3, h4, h5, h6 {
   }
   .hero-actions {
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap; /* Safety wrap if screen is impossibly narrow */
+    gap: 0.75rem; /* Tighter gap for aesthetics on small screens */
   }
   .hero-actions .btn {
-    width: 100%;
+    width: auto;
     text-align: center;
     justify-content: center;
+    padding: 0.75rem 1.25rem; /* Slightly tighter padding for phones */
   }
   .hero-image {
     width: 100%;
     aspect-ratio: 1 / 1;
     border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 24px;
+    border-radius: 24px 24px 24px 100px; /* Restored exaggerated bottom right/left corner */
   }
   .services-grid {
     grid-template-columns: 1fr;

@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header container">
       <div className="logo">
         <Link href="/">
-          <img src="/imagotipo%20primario%20blanco.jpg" alt="BeCom Advisory Logo" style={{ height: '36px', width: 'auto' }} />
+          <img src="/imagotipo_primario_blanco.png" alt="BeCom Advisory Logo" style={{ height: '36px', width: 'auto' }} />
         </Link>
       </div>
       <nav className="nav">

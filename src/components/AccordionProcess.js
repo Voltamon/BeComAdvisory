@@ -9,10 +9,10 @@ export default function AccordionProcess({ steps }) {
 
   // We assign a distinct background gradient to simulate unique images per step
   const images = [
-    "linear-gradient(135deg, #43978D, #D09DF3)", // Matching image approx
-    "linear-gradient(135deg, #10b981, #3b82f6)",
-    "linear-gradient(135deg, #f43f5e, #8b5cf6)",
-    "linear-gradient(135deg, #f59e0b, #ef4444)",
+    "linear-gradient(135deg, #ffffff, #d4d4d4)",
+    "linear-gradient(135deg, #f5f5f5, #cccccc)",
+    "linear-gradient(135deg, #eeeeee, #b3b3b3)",
+    "linear-gradient(135deg, #e0e0e0, #999999)",
   ];
 
   return (

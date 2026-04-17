@@ -101,12 +101,12 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <button className="btn btn-primary">Agenda tu Diagnóstico</button>
-            <button className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <a href="#proceso" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
               ¿Cómo trabajamos? <ArrowRight size={16}/>
-            </button>
+            </a>
           </div>
         </div>
-        <div className="hero-image" style={{ background: 'linear-gradient(45deg, #18181A, #2a2a35)', position: 'relative', zIndex: 1 }}>
+        <div className="hero-image" style={{ background: 'linear-gradient(135deg, #1f1f1f 0%, #000000 100%)', border: '1px solid rgba(255,255,255,0.05)', position: 'relative', zIndex: 1 }}>
           <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.1)' }}>
             [Portrait Image / Illustration]
           </div>
@@ -169,7 +169,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section id="contacto" className="container section">
-        <SpotlightCard className="cta" spotlightColor="rgba(144, 187, 240, 0.15)">
+        <SpotlightCard className="cta" spotlightColor="rgba(255, 255, 255, 0.15)">
           <h2 className="section-title">Agenda tu Diagnóstico Gratuito</h2>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
             Asegura el crecimiento de tu empresa con el acompañamiento adecuado.
@@ -183,7 +183,9 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="container footer">
-        <div className="logo" style={{ fontSize: '1.2rem' }}>BeCom<span className="text-accent">_</span>Advisory</div>
+        <div className="logo">
+          <img src="/imagotipo_primario_blanco.png" alt="BeCom Advisory Logo" style={{ height: '36px', width: 'auto' }} />
+        </div>
         <div className="footer-links">
           <a href="#" className="nav-link">Instagram</a>
           <a href="#" className="nav-link">LinkedIn</a>

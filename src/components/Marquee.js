@@ -13,30 +13,47 @@ export default function Marquee() {
   const container = useRef();
   const content = useRef();
 
-  const partners = [
-    "LOGONAME", "Acme Corp", "TechFlow", "VenturePartners", "InnovateX", "NextGen",
-    "LOGONAME", "Acme Corp", "TechFlow", "VenturePartners", "InnovateX", "NextGen",
+  const basePartners = [
+    "/partners/Bi_Bi.png", "/partners/Bloomea.png", "/partners/Chuz_Rentals.png",
+    "/partners/ET_interiors.png", "/partners/Oma.png", "/partners/nua_nuts.png"
   ];
+  const partners = [...basePartners, ...basePartners, ...basePartners];
 
   useGSAP(() => {
-    // Basic continuous scrolling based on viewport scrub
-    gsap.to(content.current, {
-      xPercent: -50,
-      ease: "none",
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 1, // smoothen the scrub
-      }
+    let mm = gsap.matchMedia();
+
+    // Desktop/Laptop: Scrub animation driven by scroll position
+    mm.add("(min-width: 768px)", () => {
+      gsap.to(content.current, {
+        xPercent: -50,
+        ease: "none",
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1, // smoothen the scrub
+        }
+      });
     });
+
+    // Mobile: Autonomous continuous infinite loop
+    mm.add("(max-width: 767px)", () => {
+      gsap.to(content.current, {
+        xPercent: -50,
+        ease: "none",
+        duration: 15, // Smooth infinite scroll pacing
+        repeat: -1,
+      });
+    });
+
+    return () => mm.revert(); // Clean up matchMedia on unmount
   }, { scope: container });
 
   return (
     <div className="marquee-wrapper" ref={container}>
       <div className="marquee-content" ref={content} style={{ width: "max-content", display: "flex" }}>
         {partners.map((partner, index) => (
-          <h4 key={index}>{partner}</h4>
+          <img key={index} src={partner} alt="Partner Logo" style={{ height: '64px', opacity: 0.5, filter: 'invert(1)' }} />
         ))}
       </div>
     </div>

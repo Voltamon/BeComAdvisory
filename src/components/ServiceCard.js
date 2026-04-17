@@ -44,6 +44,18 @@ export default function ServiceCard({ icon, title, whatWeDo, value }) {
         {icon}
       </div>
       <h3 className="service-title" style={{ pointerEvents: 'none' }}>{title}</h3>
+      
+      {/* Blank gradient image placeholder to be populated later */}
+      <div style={{ 
+        width: '100%', 
+        aspectRatio: '3 / 2', 
+        background: 'linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01))',
+        borderRadius: '12px',
+        border: '1px solid rgba(255,255,255,0.03)',
+        marginBottom: '1.5rem',
+        pointerEvents: 'none'
+      }}></div>
+
       <div style={{ marginBottom: '1.5rem', pointerEvents: 'none' }}>
         <h4 style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.5rem', letterSpacing: '0.05em' }}>¿Qué hacemos?</h4>
         <p className="service-p">{whatWeDo}</p>
