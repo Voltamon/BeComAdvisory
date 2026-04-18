@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Header from '@/components/Header';
 import Marquee from '@/components/Marquee';
 import ServiceCard from '@/components/ServiceCard';
@@ -8,7 +8,8 @@ import { Briefcase, Component, Users, ArrowRight } from 'lucide-react';
 import SpotlightCard from '@/components/SpotlightCard';
 import AccordionProcess from '@/components/AccordionProcess';
 import LightRays from '@/components/LightRays';
-import Link from 'next/link';
+import CalendarModal from '@/components/CalendarModal';
+import BorderGlow from '@/components/BorderGlow';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -20,6 +21,9 @@ if (typeof window !== "undefined") {
 
 export default function Home() {
   const container = useRef();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   
   useGSAP(() => {
     // Hero Load Animations
@@ -114,7 +118,7 @@ export default function Home() {
             Únete a las mejores compañías allá afuera.
           </p>
           <div className="hero-actions">
-            <Link href="/form" className="btn btn-primary">Agenda tu Diagnóstico</Link>
+            <button className="btn btn-primary" onClick={openModal} aria-label="Abrir calendario para agendar un diagnóstico gratuito">Agenda tu Diagnóstico</button>
             <a href="#proceso" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
               ¿Cómo trabajamos? <ArrowRight size={16}/>
             </a>
@@ -122,6 +126,7 @@ export default function Home() {
         </div>
         <div className="hero-image" style={{ background: 'linear-gradient(135deg, #1f1f1f 0%, #000000 100%)', border: '1px solid rgba(255,255,255,0.05)', position: 'relative', zIndex: 1 }}>
           <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.1)' }}>
+            <span className="sr-only">Ilustración representativa de estrategia y tecnología empresarial</span>
             [Portrait Image / Illustration]
           </div>
         </div>
@@ -215,16 +220,24 @@ export default function Home() {
 
       {/* CTA Section */}
       <section id="contacto" className="container section">
-        <SpotlightCard className="cta" spotlightColor="rgba(255, 255, 255, 0.15)">
-          <h2 className="section-title">Agenda tu Diagnóstico Gratuito</h2>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
-            Asegura el crecimiento de tu empresa con el acompañamiento adecuado.
-            Desarrollo de tecnología. Expertise centralizado.
-          </p>
-          <Link href="/form" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>
-            Descubre Cómo
-          </Link>
-        </SpotlightCard>
+        <BorderGlow 
+          style={{ marginTop: '4rem' }} 
+          animated={true}
+          glowIntensity={0.8}
+          glowRadius={8}
+          edgeSensitivity={20}
+        >
+          <SpotlightCard className="cta" spotlightColor="rgba(255, 255, 255, 0.15)">
+            <h2 className="section-title">Agenda tu Diagnóstico Gratuito</h2>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
+              Asegura el crecimiento de tu empresa con el acompañamiento adecuado.
+              Desarrollo de tecnología. Expertise centralizado.
+            </p>
+            <button className="btn btn-primary" onClick={openModal} style={{ padding: '1rem 3rem', fontSize: '1.1rem' }} aria-label="Descubre cómo agendar tu diagnóstico gratuito">
+              Descubre Cómo
+            </button>
+          </SpotlightCard>
+        </BorderGlow>
       </section>
 
       <div className="section-divider"></div>
@@ -232,13 +245,14 @@ export default function Home() {
       {/* Footer */}
       <footer className="container footer">
         <div className="logo">
-          <img src="/imagotipo_primario_blanco.png" alt="BeCom Advisory Logo" style={{ height: '36px', width: 'auto' }} />
+          <img src="/imagotipo_primario_blanco.png" alt="BeCom Advisory - Consultoría y Estrategia" style={{ height: '36px', width: 'auto' }} />
         </div>
         <div className="footer-links">
           <a href="#" className="nav-link">Instagram</a>
           <a href="#" className="nav-link">LinkedIn</a>
         </div>
       </footer>
+      <CalendarModal isOpen={isModalOpen} onClose={closeModal} />
     </main>
   );
 }

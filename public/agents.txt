@@ -1,0 +1,19 @@
+# agents.txt for BeCom Advisory
+# More info at https://agents-txt.org
+
+# Define the scope
+Agents-txt-version: 1.0
+
+# General information
+Site-Owner: BeCom Advisory
+Contact: https://becomadvisory.vercel.app/#contacto
+
+# Permissions for AI Agents
+# By default, we allow indexing for better RAG and search discovery
+Agent: *
+Allow: /
+Allow: /#servicios
+Allow: /#proceso
+
+# Sitemap location
+Sitemap: https://becomadvisory.vercel.app/sitemap.xml

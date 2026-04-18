@@ -52,9 +52,17 @@ export default function Marquee() {
   return (
     <div className="marquee-wrapper" ref={container}>
       <div className="marquee-content" ref={content} style={{ width: "max-content", display: "flex" }}>
-        {partners.map((partner, index) => (
-          <img key={index} src={partner} alt="Partner Logo" style={{ height: '64px', opacity: 0.5, filter: 'invert(1)' }} />
-        ))}
+        {partners.map((partner, index) => {
+          const partnerName = partner.split('/').pop().replace('.png', '').replace('_', ' ');
+          return (
+            <img 
+              key={index} 
+              src={partner} 
+              alt={`Logo de ${partnerName} - Socio estratégico de BeCom Advisory`} 
+              style={{ height: '64px', opacity: 0.5, filter: 'invert(1)' }} 
+            />
+          );
+        })}
       </div>
     </div>
   );
