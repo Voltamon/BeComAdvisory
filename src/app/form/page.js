@@ -137,8 +137,9 @@ export default function FormPage() {
               <h2 className="form-label">Desafíos y Objetivos</h2>
               <div className="form-group">
                 <textarea 
-                  placeholder="¿Cuál es el principal desafío que tu negocio enfrenta hoy? O ¿Tienes un proyecto específico que necesitas implementar y que no logra avanzar?" 
+                  placeholder="¿Cuál es el principal desafío que tu negocio enfrenta hoy?" 
                   className="form-textarea"
+                  rows={2}
                   value={formData.challenge}
                   onChange={(e) => setFormData({ ...formData, challenge: e.target.value })}
                 />

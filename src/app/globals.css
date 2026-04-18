@@ -504,8 +504,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-textarea {
-  min-height: 100px;
+  /* min-height: 75px; */
+  rows: 1;
   resize: vertical;
+  field-sizing: content;
 }
 
 /* Calendar Styles */
@@ -635,5 +637,17 @@ h1, h2, h3, h4, h5, h6 {
   .scheduling-wrapper {
     flex-direction: column;
     gap: 3rem;
+    align-items: stretch;
   }
+  
+  .calendar-container, .times-section {
+    width: 100%;
+  }
+
+  .form-textarea {
+  /* min-height: 75px; */
+  rows: 2;
+  resize: vertical;
+  field-sizing: content;
+}
 }
