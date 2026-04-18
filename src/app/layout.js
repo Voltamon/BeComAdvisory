@@ -46,12 +46,68 @@ export const metadata = {
   },
   icons: {
     icon: "/icon.png",
-  }
+  },
+  alternates: {
+    canonical: 'https://becomadvisory.vercel.app',
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://becomadvisory.vercel.app/#organization",
+      "name": "BeCom Advisory",
+      "url": "https://becomadvisory.vercel.app",
+      "logo": "https://becomadvisory.vercel.app/imagotipo_primario_blanco.png",
+      "description": "Estrategia 360º en negocios. Desarrollo de tecnología. Expertise centralizado.",
+      "sameAs": [
+        "https://www.linkedin.com/company/becom-advisory",
+        "https://www.instagram.com/becom_advisory"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://becomadvisory.vercel.app/#service",
+      "name": "BeCom Advisory",
+      "url": "https://becomadvisory.vercel.app",
+      "image": "https://becomadvisory.vercel.app/imagotipo_primario_blanco.png",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mexico City",
+        "addressCountry": "MX"
+      },
+      "description": "Consultoría estratégica y desarrollo tecnológico para empresas.",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://becomadvisory.vercel.app/form",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Appointment",
+          "name": "Diagnóstico Estratégico"
+        }
+      }
+    }
+  ]
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${inter.variable} ${outfit.variable}`}>
         {children}
       </body>

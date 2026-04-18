@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://becomadvisory.com/sitemap.xml',
+    sitemap: 'https://becomadvisory.vercel.app/sitemap.xml',
   };
 }
