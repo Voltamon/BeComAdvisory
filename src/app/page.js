@@ -54,6 +54,19 @@ export default function Home() {
       }
     );
 
+    // Approach Animations
+    gsap.from('.approach-column', {
+      scrollTrigger: {
+        trigger: '.approach-grid',
+        start: 'top 85%',
+      },
+      y: 40,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.3,
+      ease: 'power3.out'
+    });
+
     // Process Steps Animations
     gsap.from('.process-steps .step', {
       scrollTrigger: {
@@ -119,6 +132,34 @@ export default function Home() {
         <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Socios que confían en nosotros</p>
       </section>
       <Marquee />
+      
+      {/* Approach Section */}
+      <section className="container section">
+        <div className="approach-grid">
+          <div className="approach-column">
+            <h3>Diseñado para tu Empresa</h3>
+            <p>Nuestro valor reside en nuestra capacidad de ser el motor de cambio.</p>
+            <p>
+              No solo asesoramos, sino que <strong>diseñamos e implementamos soluciones a la medida</strong>, 
+              asegurando que cada estrategia se traduzca en resultados reales.
+            </p>
+            <p>
+              Con <strong>BeCom Advisory</strong>, obtienes un socio que entiende tus desafíos y te ayuda a alcanzar tus metas, sin importar tu tamaño o sector.
+            </p>
+          </div>
+          <div className="approach-column">
+            <h3>Operamos con un enfoque dual</h3>
+            <p>
+              <strong>Para startups y PyMEs:</strong> Somos el socio estratégico que brinda estructura y guía para que tu negocio no solo crezca, sino que lo haga de forma sostenible.
+            </p>
+            <p>
+              <strong>Para empresas consolidadas:</strong> Funcionamos como una Oficina de Gestión de Proyectos (PMO) externa. Lideramos y ejecutamos proyectos clave, asegurando una implementación impecable y la entrega de resultados concretos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider"></div>
 
       {/* Services Section */}
       <section id="servicios" className="container section">

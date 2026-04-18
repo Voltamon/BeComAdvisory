@@ -123,6 +123,41 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 3rem;
 }
 
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: flex-start;
+}
+
+.approach-column h3 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.approach-column p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.approach-column strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .approach-column h3 {
+    font-size: 1.8rem;
+  }
+}
+
 /* Card */
 .card {
   background-color: var(--bg-card);
