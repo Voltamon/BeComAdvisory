@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header container">
       <div className="logo">
         <Link href="/" aria-label="BeCom Advisory - Página Principal">
-          <img src="/imagotipo_primario_blanco.png" alt="BeCom Advisory - Consultoría Estratégica y Tecnología" style={{ height: '36px', width: 'auto' }} />
+          <img src="/imagotipo_primario_blanco.png" alt="BeCom Advisory - Consultoría Estratégica y Tecnología" style={{ height: '36px', width: 'auto' }} fetchpriority="high" />
         </Link>
       </div>
       <nav className="nav">

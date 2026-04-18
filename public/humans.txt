@@ -1,0 +1,11 @@
+/* TEAM */
+  Site Owner: BeCom Advisory
+  Contact: contacto [at] becomadvisory.vercel.app
+  Location: Mexico City, MX
+
+/* SITE */
+  Last update: 2026/04/18
+  Language: Spanish
+  Doctype: HTML5
+  Standards: Schema.org, Open Graph, Agents.txt
+  Components: Next.js, GSAP, Lucide React

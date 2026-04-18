@@ -252,8 +252,8 @@ export default function FormClient() {
           <img src="/imagotipo_primario_blanco.png" alt="BeCom Advisory Logo" style={{ height: '36px', width: 'auto' }} />
         </div>
         <div className="footer-links">
-          <a href="#" className="nav-link">Instagram</a>
-          <a href="#" className="nav-link">LinkedIn</a>
+          <a href="#" className="nav-link" rel="me">Instagram</a>
+          <a href="#" className="nav-link" rel="me">LinkedIn</a>
         </div>
       </footer>
     </main>
