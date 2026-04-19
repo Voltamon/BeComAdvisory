@@ -2,10 +2,10 @@
 
 import { useRef, useState } from 'react';
 
-export default function ServiceCard({ icon, title, whatWeDo, value }) {
+export default function ServiceCard({ icon, title, whatWeDo, value, image }) {
   const cardRef = useRef(null);
   const [transform, setTransform] = useState('perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
-
+  
   const handleMouseMove = (e) => {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
@@ -22,7 +22,7 @@ export default function ServiceCard({ icon, title, whatWeDo, value }) {
   const handleMouseLeave = () => {
     setTransform('perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
   };
-
+  
   return (
     <div 
       className="card service-card" 
@@ -40,21 +40,26 @@ export default function ServiceCard({ icon, title, whatWeDo, value }) {
           : 'none'
       }}
     >
-      <div className="service-icon" style={{ pointerEvents: 'none' }}>
-        {icon}
-      </div>
       <h3 className="service-title" style={{ pointerEvents: 'none' }}>{title}</h3>
       
-      {/* Blank gradient image placeholder to be populated later */}
       <div style={{ 
         width: '100%', 
         aspectRatio: '3 / 2', 
-        background: 'linear-gradient(135deg, rgba(34,81,255,0.08), rgba(34,81,255,0.02))',
+        background: image ? 'none' : 'linear-gradient(135deg, rgba(34,81,255,0.08), rgba(34,81,255,0.02))',
         borderRadius: '12px',
         border: '1px solid rgba(34,81,255,0.08)',
         marginBottom: '1.5rem',
+        overflow: 'hidden',
         pointerEvents: 'none'
-      }}></div>
+      }}>
+        {image && (
+          <img 
+            src={image} 
+            alt={title} 
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+          />
+        )}
+      </div>
 
       <div style={{ marginBottom: '1.5rem', pointerEvents: 'none' }}>
         <h4 style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.5rem', letterSpacing: '0.05em' }}>¿Qué hacemos?</h4>

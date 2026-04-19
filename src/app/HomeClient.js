@@ -120,11 +120,11 @@ export default function HomeClient() {
             </a>
           </div>
         </div>
-        <div className="hero-image" style={{ background: 'linear-gradient(135deg, #082640 0%, #051C2C 100%)', border: '1px solid rgba(34,81,255,0.12)', position: 'relative', zIndex: 1 }}>
-          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(34,81,255,0.15)' }}>
-            <span className="sr-only">Ilustración representativa de estrategia y tecnología empresarial</span>
-            [Portrait Image / Illustration]
-          </div>
+        <div className="hero-image" style={{ border: '1px solid rgba(34,81,255,0.12)', position: 'relative', zIndex: 1 }}>
+          <img 
+            src="/hero.jpg" 
+            alt="Estrategia y tecnología empresarial - BeCom Advisory" 
+          />
         </div>
       </section>
 
@@ -180,12 +180,14 @@ export default function HomeClient() {
               title="Consultoría Estratégica"
               whatWeDo="Proporcionamos una visión 360 inicial en Business Development y Project Management para mapear las necesidades de tu empresa."
               value="Aseguramos que los proyectos y las soluciones estén alineados con los objetivos de crecimiento a largo plazo."
+              image="/services1.png"
             />
             <ServiceCard 
               icon={<Component size={24}/>}
               title="Servicios de Tecnología"
               whatWeDo="Soluciones digitales esenciales (Web, Apps, ERP, CRM, Software) bajo la dirección estratégica."
               value="Garantizamos que la infraestructura digital del negocio sea moderna, eficiente y cohesiva con la estrategia global de la empresa."
+              image="/services2.jpg"
             />
             <ServiceCard 
               icon={<Users size={24}/>}

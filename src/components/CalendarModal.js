@@ -5,7 +5,7 @@ import { X } from 'lucide-react';
 import gsap from 'gsap';
 
 const CALENDAR_URL =
-  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0vg8YjWMMWb765TPyrKs16cUtjMNK5ZCAExhj4CpkvQZotyLYzkCoPPcmQSBvfpzYMBwkxQ-J4?hl=es";
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ryDRUSi_aKFRVGN93D_cvY4KKGf4V7M05E3_p7RLjuCVHCclYrNzsM_gA5jHC5NjiIXvvS06X?hl=es";
 
 export default function CalendarModal({ isOpen, onClose }) {
   const overlayRef = useRef(null);
