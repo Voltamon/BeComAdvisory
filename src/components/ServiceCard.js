@@ -34,7 +34,7 @@ export default function ServiceCard({ icon, title, whatWeDo, value, image }) {
         transition: transform === 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)' 
           ? 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s ease' 
           : 'box-shadow 0.2s ease',
-        willChange: 'transform',
+        willChange: 'transform, opacity',
         boxShadow: transform !== 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)' 
           ? '0 20px 40px rgba(0,0,0,0.4)' 
           : 'none'

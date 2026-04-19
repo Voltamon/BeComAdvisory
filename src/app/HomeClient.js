@@ -77,7 +77,10 @@ export default function HomeClient() {
       opacity: 0,
       duration: 0.6,
       stagger: 0.2,
-      ease: 'back.out(1.2)'
+      ease: 'back.out(1.2)',
+      onComplete: () => {
+        gsap.set('.service-card', { clearProps: "all" });
+      }
     });
     
     // CTA Animation
@@ -194,6 +197,7 @@ export default function HomeClient() {
               title="Red de Expertos Vetted"
               whatWeDo="Te damos acceso instantáneo a expertos de nicho, validados y curados (Legal, Fiscal, RH, Finanzas, Ventas, etc.)"
               value="Eliminamos el riesgo y la pérdida de tiempo al centralizar el expertise bajo la seguridad de BeCom."
+              image="/services3.jpg"
             />
           </div>
         </section>

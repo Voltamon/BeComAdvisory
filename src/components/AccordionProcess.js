@@ -7,16 +7,21 @@ export default function AccordionProcess({ steps }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [hoverImage, setHoverImage] = useState(false);
 
-  // We assign a distinct background gradient to simulate unique images per step
-  const images = [
-    "linear-gradient(135deg, #082640, #2251FF)",
-    "linear-gradient(135deg, #051C2C, #3860BE)",
-    "linear-gradient(135deg, #071f33, #00A9F4)",
-    "linear-gradient(135deg, #082640, #AAE6F0)",
-  ];
+  const imagePath = "/accordion.jpg";
+
 
   return (
     <div className="accordion-wrapper">
+      {/* Top Image for Mobile only */}
+      <div 
+        className="accordion-mobile-image"
+        style={{ 
+          backgroundImage: `url(${imagePath})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          marginBottom: '2rem'
+        }}
+      />
       
       {/* Left side - Accordions */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%' }}>
@@ -60,11 +65,7 @@ export default function AccordionProcess({ steps }) {
                     opacity: isActive ? 1 : 0,
                     transition: 'opacity 0.4s ease',
                   }}>
-                    {/* Inline Image only visible on Mobile */}
-                    <div 
-                      className="accordion-mobile-image"
-                      style={{ background: images[index] }}
-                    />
+                    {/* Image removed from here for mobile as per user request */}
                     
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', margin: 0, lineHeight: '1.6' }}>
                       {step.description}
@@ -87,9 +88,11 @@ export default function AccordionProcess({ steps }) {
             width: '100%',
             maxWidth: '450px',
             aspectRatio: '1/1', // Clean fixed square aspect
-            background: images[activeIndex],
+            backgroundImage: `url(${imagePath})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             borderRadius: hoverImage ? '50%' : '16px',
-            transition: 'border-radius 0.6s cubic-bezier(0.25, 1, 0.5, 1), background 0.4s ease',
+            transition: 'border-radius 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s ease',
             boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
             cursor: 'cell'
           }}
