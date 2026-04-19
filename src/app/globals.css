@@ -391,10 +391,12 @@ h6 {
   /* Triple-system group peer-dimming properties */
 }
 
-.services-grid:hover .service-card:not(:hover) {
-  opacity: 0.6;
-  filter: blur(2px) grayscale(50%);
-  transform: scale(0.98);
+@media (hover: hover) {
+  .services-grid:hover .service-card:not(:hover) {
+    opacity: 0.6;
+    filter: blur(2px) grayscale(50%);
+    transform: scale(0.98);
+  }
 }
 
 .service-icon {
