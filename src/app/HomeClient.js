@@ -249,7 +249,7 @@ export default function HomeClient() {
           <img src="/imagotipo_primario_blanco.png" alt="BeCom Advisory - Consultoría y Estrategia" style={{ height: '36px', width: 'auto' }} />
         </div>
         <div className="footer-links">
-          <a href="#" className="nav-link" rel="me">Instagram</a>
+          <a href="https://www.instagram.com/becom.advisory/" className="nav-link" rel="me" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="#" className="nav-link" rel="me">LinkedIn</a>
         </div>
       </footer>
