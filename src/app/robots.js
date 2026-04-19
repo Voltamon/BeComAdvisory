@@ -4,6 +4,10 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://becomadvisory.vercel.app/sitemap.xml',
+    sitemap: [
+      'https://becomadvisory.vercel.app/sitemap.xml',
+      'https://becomadvisory.vercel.app/sitemap-images.xml',
+      'https://becomadvisory.vercel.app/sitemap-videos.xml',
+    ],
   };
 }

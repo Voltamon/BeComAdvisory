@@ -1,0 +1,23 @@
+# BeCom Advisory
+
+> El Ecosistema Centralizado para el Crecimiento Empresarial. Estrategia 360º en negocios, desarrollo de tecnología y expertise centralizado.
+
+## Descripción General
+BeCom Advisory es un socio estratégico dual que brinda estructura a startups y PyMEs, y funciona como PMO externa para empresas consolidadas. Nuestro objetivo es convertir la complejidad de los negocios en un plan de acción claro y efectivo.
+
+## Servicios
+- **Consultoría Estratégica**: Visión 360 en Business Development y Project Management.
+- **Servicios de Tecnología**: Soluciones digitales esenciales (Web, Apps, ERP, CRM, Software).
+- **Red de Expertos Vetted**: Acceso instantáneo a expertos curados en Legal, Fiscal, RH, Finanzas y Ventas.
+
+## Proceso: Nuestra Forma de Trabajar
+1. **Diagnóstico Estratégico**: Identificación de visión y desafíos.
+2. **Prescripción e Integración**: Identificación de la solución tecnológica o estratégica requerida.
+3. **Ejecución Integral**: Implementación alineada con objetivos de largo plazo.
+4. **Revisión y Seguimiento**: Socio estratégico a largo plazo.
+
+## Contacto
+- **Web**: https://becomadvisory.vercel.app
+- **Instagram**: https://www.instagram.com/becom.advisory/
+- **LinkedIn**: https://www.linkedin.com/company/becom-advisory
+- **Diagnóstico Gratuito**: https://becomadvisory.vercel.app/form

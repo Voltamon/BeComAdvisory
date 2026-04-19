@@ -56,15 +56,35 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://becomadvisory.vercel.app/#website",
+      "url": "https://becomadvisory.vercel.app",
+      "name": "BeCom Advisory",
+      "description": "El Ecosistema Centralizado para el Crecimiento Empresarial.",
+      "publisher": {
+        "@id": "https://becomadvisory.vercel.app/#organization"
+      },
+      "inLanguage": "es"
+    },
+    {
       "@type": "Organization",
       "@id": "https://becomadvisory.vercel.app/#organization",
       "name": "BeCom Advisory",
       "url": "https://becomadvisory.vercel.app",
-      "logo": "https://becomadvisory.vercel.app/imagotipo_primario_blanco.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://becomadvisory.vercel.app/imagotipo_primario_blanco.png"
+      },
+      "image": "https://becomadvisory.vercel.app/hero.jpg",
       "description": "Estrategia 360º en negocios. Desarrollo de tecnología. Expertise centralizado.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mexico City",
+        "addressCountry": "MX"
+      },
       "sameAs": [
         "https://www.linkedin.com/company/becom-advisory",
-        "https://www.instagram.com/becom_advisory"
+        "https://www.instagram.com/becom.advisory/"
       ]
     },
     {
@@ -72,7 +92,7 @@ const jsonLd = {
       "@id": "https://becomadvisory.vercel.app/#service",
       "name": "BeCom Advisory",
       "url": "https://becomadvisory.vercel.app",
-      "image": "https://becomadvisory.vercel.app/imagotipo_primario_blanco.png",
+      "image": "https://becomadvisory.vercel.app/hero.jpg",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
