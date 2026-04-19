@@ -70,10 +70,12 @@ body {
   color: #f0f4ff;
 }
 
-.section-light .card:hover,
-.section-light .service-card:hover {
-  border-color: #2251FF;
-  box-shadow: 0 10px 30px rgba(34, 81, 255, 0.25);
+@media (hover: hover) {
+  .section-light .card:hover,
+  .section-light .service-card:hover {
+    border-color: #2251FF;
+    box-shadow: 0 10px 30px rgba(34, 81, 255, 0.25);
+  }
 }
 
 /* Title — white like approach h3 */
@@ -272,10 +274,12 @@ h6 {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
 }
 
 /* Header */

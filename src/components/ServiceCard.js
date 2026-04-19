@@ -7,7 +7,7 @@ export default function ServiceCard({ icon, title, whatWeDo, value, image }) {
   const [transform, setTransform] = useState('perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
   
   const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
+    if (!cardRef.current || (typeof window !== 'undefined' && window.innerWidth <= 768)) return;
     const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
