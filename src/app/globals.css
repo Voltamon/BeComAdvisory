@@ -1,12 +1,23 @@
 :root {
-  --bg-primary: #000000;
-  --bg-secondary: #a3a3a3;
-  --bg-card: #000000;
-  --text-primary: #ffffff;
-  --text-secondary: #a3a3a3;
-  --accent: #ffffff;
-  --accent-hover: #d1d1d1;
-  --divider: #262626;
+  --bg-primary: #051C2C;
+  --bg-secondary: #0a2d45;
+  --bg-card: #071f33;
+  --text-primary: #f0f4ff;
+  --text-secondary: #8aaec8;
+  --accent: #2251FF;
+  --accent-hover: #3d65ff;
+  --divider: #0e3254;
+
+  /* Extended McKinsey palette */
+  --navy-deep: #051C2C;
+  --navy-mid: #082640;
+  --navy-card: #071f33;
+  --blue-electric: #2251FF;
+  --blue-electric-hover: #3d65ff;
+  --blue-cyan: #00A9F4;
+  --blue-pale: #AAE6F0;
+  --blue-tint: #E6ECFF;
+  --blue-muted: #3860BE;
 
   --border-radius: 20px;
   --font-heading: 'Outfit', sans-serif;
@@ -27,13 +38,85 @@ body {
   overflow-x: hidden;
   background-color: var(--bg-primary);
   background-image:
-    radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.08), transparent 40%),
-    radial-gradient(ellipse at bottom right, rgba(255, 255, 255, 0.05), transparent 50%);
+    radial-gradient(ellipse at top left, rgba(34, 81, 255, 0.12), transparent 40%),
+    radial-gradient(ellipse at bottom right, rgba(0, 169, 244, 0.07), transparent 50%);
   background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.5;
   scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------------
+   DUAL-TONE: Light section panels (white background)
+   ------------------------------------------------------- */
+.section-light {
+  --section-light-primary: #051C2C;
+  --section-light-secondary: #3860BE;
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+}
+
+.section-light .section-divider {
+  background: linear-gradient(90deg, transparent, #d0ddf0 20%, #d0ddf0 80%, transparent);
+}
+
+/* Card styles inside light sections — deep navy cards */
+.section-light .card,
+.section-light .service-card {
+  background: linear-gradient(135deg, #082640 0%, #071f33 100%);
+  border-color: #0e3254;
+  color: #f0f4ff;
+}
+
+.section-light .card:hover,
+.section-light .service-card:hover {
+  border-color: #2251FF;
+  box-shadow: 0 10px 30px rgba(34, 81, 255, 0.25);
+}
+
+/* Title — white like approach h3 */
+.section-light .service-title {
+  color: #f0f4ff;
+}
+
+/* Body text — steel blue like approach p (var --text-secondary) */
+.section-light .service-p {
+  color: #8aaec8;
+}
+
+/* Uppercase labels — electric blue accent */
+.section-light .service-card h4 {
+  color: #2251FF;
+}
+
+/* Marquee inside light section */
+.section-light .marquee-wrapper {
+  background: #ffffff;
+  border-top-color: #d0ddf0;
+  border-bottom-color: #d0ddf0;
+}
+
+.section-light .marquee-content h4 {
+  color: #3860BE;
+}
+
+/* CTA card — deep navy island inside white section */
+.cta-navy {
+  background: linear-gradient(135deg, #082640 0%, #051C2C 100%) !important;
+  border: 0.25px solid #3860BE !important;
+}
+
+/* Override BorderGlow card-bg inside the white section so it's also navy */
+.section-light .border-glow-card {
+  --card-bg: #071f33;
+}
+
+/* Service icon on light background */
+.section-light .service-icon {
+  background: rgba(34, 81, 255, 0.08);
+  color: #2251FF;
 }
 
 a {
@@ -74,7 +157,7 @@ h6 {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff, #888888);
+  background: linear-gradient(135deg, #f0f4ff, #8aaec8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -105,13 +188,13 @@ h6 {
 
 .btn-primary {
   background-color: var(--accent);
-  color: #000;
+  color: #f0f4ff;
 }
 
 .btn-primary:hover {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(34, 81, 255, 0.4);
 }
 
 .btn-outline {
@@ -121,7 +204,7 @@ h6 {
 }
 
 .btn-outline:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(34, 81, 255, 0.08);
   border-color: var(--text-secondary);
 }
 
@@ -283,8 +366,8 @@ h6 {
 .marquee-wrapper {
   overflow: hidden;
   padding: 0.5rem 0;
-  border-top: 2px solid #555555;
-  border-bottom: 2px solid #555555;
+  border-top: 2px solid #0e3254;
+  border-bottom: 2px solid #0e3254;
   background: var(--bg-card);
 }
 
@@ -318,7 +401,7 @@ h6 {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(34, 81, 255, 0.07);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -369,7 +452,7 @@ h6 {
 .step-number {
   font-size: 5rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 169, 244, 0.12);
   margin-bottom: 1rem;
   font-family: var(--font-heading);
 }
@@ -399,7 +482,7 @@ h6 {
   border-radius: var(--border-radius);
   padding: 6rem 3rem;
   text-align: center;
-  border: 0.25px solid #a3a3a3;
+  border: 0.25px solid #3860BE;
 }
 
 /* Footer */
@@ -511,7 +594,7 @@ h6 {
   .hero-image {
     width: 100%;
     aspect-ratio: 1 / 1;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(34, 81, 255, 0.15);
     border-radius: 24px 24px 24px 100px;
     /* Restored exaggerated bottom right/left corner */
   }
@@ -585,7 +668,7 @@ h6 {
 
 /* Calendar Styles */
 .calendar-container {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(34, 81, 255, 0.05);
   border: 1px solid var(--divider);
   border-radius: var(--border-radius);
   padding: 1.25rem;
@@ -624,16 +707,16 @@ h6 {
 }
 
 .calendar-day:hover:not(.disabled) {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(34, 81, 255, 0.15);
 }
 
 .calendar-day.active {
   background: var(--accent);
-  color: #000;
+  color: #f0f4ff;
 }
 
 .calendar-day.disabled {
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(138, 174, 200, 0.3);
   cursor: not-allowed;
 }
 
@@ -692,7 +775,7 @@ h6 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #000;
+  background: var(--navy-deep);
 }
 
 /* Scheduling Layout */
@@ -734,7 +817,7 @@ h6 {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(5, 28, 44, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   display: flex;
@@ -744,7 +827,7 @@ h6 {
 }
 
 .modal-panel {
-  background: #0a0a0a;
+  background: #071f33;
   border: 1px solid var(--divider);
   border-radius: 24px;
   width: 90vw;
@@ -779,7 +862,7 @@ h6 {
 }
 
 .modal-close-btn {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(34, 81, 255, 0.08);
   border: 1px solid var(--divider);
   border-radius: 50%;
   width: 36px;
@@ -794,7 +877,7 @@ h6 {
 }
 
 .modal-close-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(34, 81, 255, 0.15);
   color: var(--text-primary);
   border-color: var(--text-secondary);
 }

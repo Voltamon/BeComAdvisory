@@ -59,7 +59,7 @@ export default function Marquee() {
               key={index} 
               src={partner} 
               alt={`Logo de ${partnerName} - Socio estratégico de BeCom Advisory`} 
-              style={{ height: '64px', opacity: 0.5, filter: 'invert(1)' }} 
+              style={{ height: '64px', opacity: 0.7 }} 
             />
           );
         })}

@@ -156,10 +156,10 @@ export default function FormClient() {
                       {currentDate.toLocaleString('es-ES', { month: 'long', year: 'numeric' })}
                     </span>
                     <div style={{ display: 'flex', gap: '1rem' }}>
-                      <button onClick={handlePrevMonth} style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer' }}>
+                      <button onClick={handlePrevMonth} style={{ background: 'none', border: 'none', color: 'var(--text-primary)', cursor: 'pointer' }}>
                         <ChevronLeft size={20} />
                       </button>
-                      <button onClick={handleNextMonth} style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer' }}>
+                      <button onClick={handleNextMonth} style={{ background: 'none', border: 'none', color: 'var(--text-primary)', cursor: 'pointer' }}>
                         <ChevronRight size={20} />
                       </button>
                     </div>
@@ -190,7 +190,7 @@ export default function FormClient() {
                             borderRadius: '12px',
                             border: '1px solid var(--divider)',
                             background: isSelected ? 'var(--accent)' : 'transparent',
-                            color: isSelected ? '#000' : 'var(--text-secondary)',
+                            color: isSelected ? '#f0f4ff' : 'var(--text-secondary)',
                             cursor: isDisabled ? 'not-allowed' : 'pointer',
                             opacity: isDisabled ? 0.3 : 1,
                             transition: 'all 0.2s',

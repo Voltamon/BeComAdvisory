@@ -120,21 +120,25 @@ export default function HomeClient() {
             </a>
           </div>
         </div>
-        <div className="hero-image" style={{ background: 'linear-gradient(135deg, #1f1f1f 0%, #000000 100%)', border: '1px solid rgba(255,255,255,0.05)', position: 'relative', zIndex: 1 }}>
-          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.1)' }}>
+        <div className="hero-image" style={{ background: 'linear-gradient(135deg, #082640 0%, #051C2C 100%)', border: '1px solid rgba(34,81,255,0.12)', position: 'relative', zIndex: 1 }}>
+          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(34,81,255,0.15)' }}>
             <span className="sr-only">Ilustración representativa de estrategia y tecnología empresarial</span>
             [Portrait Image / Illustration]
           </div>
         </div>
       </section>
 
-      {/* Logos Section */}
+      {/* Logos label — NAVY */}
       <section style={{ textAlign: 'center', padding: '2rem 0 1rem' }}>
         <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Socios que confían en nosotros</p>
       </section>
-      <Marquee />
-      
-      {/* Approach Section */}
+
+      {/* Partner Belt — LIGHT, original black logos */}
+      <div className="section-light">
+        <Marquee />
+      </div>
+
+      {/* Approach Section — NAVY */}
       <section className="container section">
         <div className="approach-grid">
           <div className="approach-column">
@@ -160,40 +164,38 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <div className="section-divider"></div>
+      {/* Services Section — LIGHT */}
+      <div className="section-light">
+        <section id="servicios" className="container section">
+          <div style={{ maxWidth: '600px', margin: '0 auto 3rem auto', textAlign: 'center' }}>
+            <h2 className="section-title" style={{ marginBottom: '1rem', color: 'var(--section-light-primary)' }}>Cosas que hacemos para mejorar tu negocio.</h2>
+            <p style={{ color: 'var(--section-light-secondary)' }}>
+              Eliminamos el riesgo al centralizar el expertise que necesitas.
+            </p>
+          </div>
 
-      {/* Services Section */}
-      <section id="servicios" className="container section">
-        <div style={{ maxWidth: '600px', margin: '0 auto 3rem auto', textAlign: 'center' }}>
-          <h2 className="section-title" style={{ marginBottom: '1rem' }}>Cosas que hacemos para mejorar tu negocio.</h2>
-          <p style={{ color: 'var(--text-secondary)' }}>
-            Eliminamos el riesgo al centralizar el expertise que necesitas.
-          </p>
-        </div>
-
-        <div className="services-grid">
-          <ServiceCard 
-            icon={<Briefcase size={24}/>}
-            title="Consultoría Estratégica"
-            whatWeDo="Proporcionamos una visión 360 inicial en Business Development y Project Management para mapear las necesidades de tu empresa."
-            value="Aseguramos que los proyectos y las soluciones estén alineados con los objetivos de crecimiento a largo plazo."
-          />
-          <ServiceCard 
-            icon={<Component size={24}/>}
-            title="Servicios de Tecnología"
-            whatWeDo="Soluciones digitales esenciales (Web, Apps, ERP, CRM, Software) bajo la dirección estratégica."
-            value="Garantizamos que la infraestructura digital del negocio sea moderna, eficiente y cohesiva con la estrategia global de la empresa."
-          />
-          <ServiceCard 
-            icon={<Users size={24}/>}
-            title="Red de Expertos Vetted"
-            whatWeDo="Te damos acceso instantáneo a expertos de nicho, validados y curados (Legal, Fiscal, RH, Finanzas, Ventas, etc.)"
-            value="Eliminamos el riesgo y la pérdida de tiempo al centralizar el expertise bajo la seguridad de BeCom."
-          />
-        </div>
-      </section>
-
-      <div className="section-divider"></div>
+          <div className="services-grid">
+            <ServiceCard 
+              icon={<Briefcase size={24}/>}
+              title="Consultoría Estratégica"
+              whatWeDo="Proporcionamos una visión 360 inicial en Business Development y Project Management para mapear las necesidades de tu empresa."
+              value="Aseguramos que los proyectos y las soluciones estén alineados con los objetivos de crecimiento a largo plazo."
+            />
+            <ServiceCard 
+              icon={<Component size={24}/>}
+              title="Servicios de Tecnología"
+              whatWeDo="Soluciones digitales esenciales (Web, Apps, ERP, CRM, Software) bajo la dirección estratégica."
+              value="Garantizamos que la infraestructura digital del negocio sea moderna, eficiente y cohesiva con la estrategia global de la empresa."
+            />
+            <ServiceCard 
+              icon={<Users size={24}/>}
+              title="Red de Expertos Vetted"
+              whatWeDo="Te damos acceso instantáneo a expertos de nicho, validados y curados (Legal, Fiscal, RH, Finanzas, Ventas, etc.)"
+              value="Eliminamos el riesgo y la pérdida de tiempo al centralizar el expertise bajo la seguridad de BeCom."
+            />
+          </div>
+        </section>
+      </div>
 
       {/* Process Section */}
       <section id="proceso" className="container section process">
@@ -212,31 +214,28 @@ export default function HomeClient() {
         />
       </section>
 
-      <div className="section-divider"></div>
-
-      {/* CTA Section */}
-      <section id="contacto" className="container section">
-        <BorderGlow 
-          style={{ marginTop: '4rem' }} 
-          animated={true}
-          glowIntensity={0.8}
-          glowRadius={8}
-          edgeSensitivity={20}
-        >
-          <SpotlightCard className="cta" spotlightColor="rgba(255, 255, 255, 0.15)">
-            <h2 className="section-title">Agenda tu Diagnóstico Gratuito</h2>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
-              Asegura el crecimiento de tu empresa con el acompañamiento adecuado.
-              Desarrollo de tecnología. Expertise centralizado.
-            </p>
-            <button className="btn btn-primary" onClick={openModal} style={{ padding: '1rem 3rem', fontSize: '1.1rem' }} aria-label="Descubre cómo agendar tu diagnóstico gratuito">
-              Descubre Cómo
-            </button>
-          </SpotlightCard>
-        </BorderGlow>
-      </section>
-
-      <div className="section-divider"></div>
+      {/* CTA Section — LIGHT wrapper, NAVY card */}
+      <div className="section-light">
+        <section id="contacto" className="container section">
+          <BorderGlow 
+            animated={true}
+            glowIntensity={0.8}
+            glowRadius={8}
+            edgeSensitivity={20}
+          >
+            <SpotlightCard className="cta cta-navy" spotlightColor="rgba(255, 255, 255, 0.06)">
+              <h2 className="section-title">Agenda tu Diagnóstico Gratuito</h2>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
+                Asegura el crecimiento de tu empresa con el acompañamiento adecuado.
+                Desarrollo de tecnología. Expertise centralizado.
+              </p>
+              <button className="btn btn-primary" onClick={openModal} style={{ padding: '1rem 3rem', fontSize: '1.1rem' }} aria-label="Descubre cómo agendar tu diagnóstico gratuito">
+                Descubre Cómo
+              </button>
+            </SpotlightCard>
+          </BorderGlow>
+        </section>
+      </div>
 
       {/* Footer */}
       <footer className="container footer">

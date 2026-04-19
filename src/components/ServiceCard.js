@@ -49,9 +49,9 @@ export default function ServiceCard({ icon, title, whatWeDo, value }) {
       <div style={{ 
         width: '100%', 
         aspectRatio: '3 / 2', 
-        background: 'linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01))',
+        background: 'linear-gradient(135deg, rgba(34,81,255,0.08), rgba(34,81,255,0.02))',
         borderRadius: '12px',
-        border: '1px solid rgba(255,255,255,0.03)',
+        border: '1px solid rgba(34,81,255,0.08)',
         marginBottom: '1.5rem',
         pointerEvents: 'none'
       }}></div>
@@ -61,7 +61,7 @@ export default function ServiceCard({ icon, title, whatWeDo, value }) {
         <p className="service-p">{whatWeDo}</p>
       </div>
       <div style={{ pointerEvents: 'none' }}>
-        <h4 style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--text-primary)', marginBottom: '0.5rem', letterSpacing: '0.05em' }}>Nuestro valor</h4>
+        <h4 style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.5rem', letterSpacing: '0.05em' }}>Nuestro valor</h4>
         <p className="service-p">{value}</p>
       </div>
     </div>

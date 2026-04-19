@@ -5,7 +5,7 @@
 
 .border-glow-card {
   position: relative;
-  background: var(--card-bg, #0d0d0d);
+  background: var(--card-bg, #071f33);
   border-radius: var(--border-radius, 20px);
   isolation: isolate;
 }
@@ -35,7 +35,7 @@
     var(--glow-color-10, transparent)   calc(var(--cone-spread, 20) * 1deg),
     var(--glow-color-30, transparent)   calc(var(--cone-spread, 20) * 2deg),
     var(--glow-color-60, transparent)   calc(var(--cone-spread, 20) * 3deg),
-    var(--glow-color,    white)         calc(var(--cone-spread, 20) * 4deg),
+    var(--glow-color,    #2251FF)       calc(var(--cone-spread, 20) * 4deg),
     var(--glow-color-60, transparent)   calc(var(--cone-spread, 20) * 5deg),
     var(--glow-color-30, transparent)   calc(var(--cone-spread, 20) * 6deg),
     var(--glow-color-10, transparent)   calc(var(--cone-spread, 20) * 7deg),
